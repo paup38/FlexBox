@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+header{
+    background-color: red;
+    height: 20vh;
+}
+
+main{
+    background: yellow;
+    display: flex;
+    height: 60vh;
+}
+
+aside{
+    background: green;
+    order: 1;
+    flex-grow: 1;
+}
+
+main section:first-of-type{
+    background: blue;
+    order: 2;
+    flex-grow: 5;
+}
+
+main section:nth-child(3){
+    background: pink;
+    order: 3;
+    flex-grow: 5;
+}
+
+footer{
+    background: orange;
+    height: 20vh;
+}
+
+@media all and (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
